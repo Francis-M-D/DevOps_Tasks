@@ -1,0 +1,118 @@
+===========================================================================
+                    SCRIPTING TASK SUBMISSION REPORT
+===========================================================================
+
+---------------------------------------------------------------------------
+TASK 1: AUTOMATED WEBSITE HEALTH CHECK
+---------------------------------------------------------------------------
+
+DESCRIPTION:
+Create a simple tool to check if a website (guvi.in) is working correctly 
+without having to open a web browser manually.
+
+WHAT WE DID:
+We wrote a script called 'httpcode.sh' that sends a request to the website 
+server and asks for its status code. A status of "200" tells us the site 
+is healthy and reachable.
+
+CODE:
+---------------------------------------------------------------------------
+#!/bin/bash
+
+STATUS=$(curl -s -L -o /dev/null -w "%{http_code}" guvi.in)
+
+echo "The status code is: $STATUS"
+
+if [ "$STATUS" -eq 200 ]; then
+    echo "Success: The website is up and running!"
+else
+    echo "Failure: Something went wrong. Error code: $STATUS"
+fi
+---------------------------------------------------------------------------
+
+ISSUES WE FACED:
+Initially, we were receiving a "301" status code. A 301 code means 
+"Moved Permanently," which happens when a website automatically 
+redirects from 'http' to 'https'. The script was stopping at the 
+redirect instead of following it to the final destination.
+
+HOW WE RESOLVED IT:
+We added the '-L' flag to our command. This tells the script to 
+"Follow Redirects," allowing it to move past the 301 code and reach 
+the final page to get the successful 200 status.
+
+
+
+---------------------------------------------------------------------------
+TASK 2: SMART "FIND AND REPLACE" WITH SAFETY LOCKS
+---------------------------------------------------------------------------
+
+DESCRIPTION:
+Create a script to find a specific word in a document and replace it 
+with a new one, but only in certain parts of the file.
+
+WHAT WE DID:
+We built 'replace.sh'. It targets a file but skips the first 4 lines 
+to protect headers. It only changes lines that contain the word 
+"welcome." It also uses "defaults," so if you don't type a new word, 
+it automatically uses "learning."
+
+CODE:
+---------------------------------------------------------------------------
+#!/bin/bash
+
+if [ -z "$1" ]; then
+    filename="sampletext.txt"
+else
+    filename=$1
+fi
+
+if [ ! -f "$filename" ]; then
+    echo "ERROR: File '$filename' does not exist."
+    exit 1
+fi
+
+read -p "Find (Default: give) : " input
+read -p "Replace (Default: learning) : " output
+
+input=${input:-"give"}
+output=${output:-"learning"}
+
+tail -n +5 "$filename" | grep -i "welcome" | sed "s/$input/$output/gI"
+
+read -n 1 -p "Are we good to replace these lines permanently? [y/n]: " cnfrm
+echo ""
+
+if [ "$cnfrm" == "y" ] || [ "$cnfrm" == "Y" ]; then
+    sed -i "5,$ { /welcome/I s/$input/$output/gI }" "$filename"
+    echo "SUCCESS: Changes saved."
+else
+    echo "ABORTED: No changes made."
+fi
+---------------------------------------------------------------------------
+
+ISSUES WE FACED:
+1. Accidental Changes: "Replace All" commands can ruin a file if you 
+   can't see what they are doing first.
+2. Missing Files: The script would crash if we typed the wrong filename.
+
+HOW WE RESOLVED IT:
+1. The Safety Preview: We added a "Dry Run" that shows you the changes 
+   on screen before saving them.
+2. The Confirmation Gate: The script pauses and waits for a 'y' key 
+   before it actually touches the file.
+3. The File Guard: We added a check to see if the file exists. If not, 
+   it gives a clear error message and stops safely.
+
+
+
+---------------------------------------------------------------------------
+FINAL CONCLUSION
+---------------------------------------------------------------------------
+Both scripts are now robust and easy to understand. Task 1 effectively 
+handles website redirects to ensure accurate monitoring, and Task 2 
+allows for powerful file editing without the risk of accidental errors.
+
+===========================================================================
+                                END OF REPORT
+===========================================================================
