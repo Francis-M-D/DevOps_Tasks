@@ -7,3 +7,4 @@ Repository for daily tasks:
 * **Day 3 Task:** Network Task - Completed.
 * **Day 4 Task:** Scripting Task - Completed.
 * **Day 5 Task:** AWS Task 1 - Completed.
+* **Day 6 Task:** AWS Task 2 - Completed.
