@@ -8,3 +8,4 @@ Repository for daily tasks:
 * **Day 4 Task:** Scripting Task - Completed.
 * **Day 5 Task:** AWS Task 1 - Completed.
 * **Day 6 Task:** AWS Task 2 - Completed.
+* **Day 7 Task:** AWS Task 3 - Completed.
