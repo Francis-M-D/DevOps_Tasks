@@ -10,3 +10,4 @@ Repository for daily tasks:
 * **Day 6 Task:** AWS Task 2 - Completed.
 * **Day 7 Task:** AWS Task 3 - Completed.
 * **Day 8 Task:** AWS Task 4 - Completed.
+* **Day 9 Task:** VCS Task - Completed.
