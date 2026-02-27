@@ -2,12 +2,13 @@
 
 Repository for daily tasks:
 
-* **Day 1 Task:** File Creation Task - Completed.
-* **Day 2 Task:** File Permission Task - Completed.
-* **Day 3 Task:** Network Task - Completed.
-* **Day 4 Task:** Scripting Task - Completed.
-* **Day 5 Task:** AWS Task 1 - Completed.
-* **Day 6 Task:** AWS Task 2 - Completed.
-* **Day 7 Task:** AWS Task 3 - Completed.
-* **Day 8 Task:** AWS Task 4 - Completed.
-* **Day 9 Task:** VCS Task - Completed.
+* **Day 01 Task:** File Creation Task - Completed.
+* **Day 02 Task:** File Permission Task - Completed.
+* **Day 03 Task:** Network Task - Completed.
+* **Day 04 Task:** Scripting Task - Completed.
+* **Day 05 Task:** AWS Task 1 - Completed.
+* **Day 06 Task:** AWS Task 2 - Completed.
+* **Day 07 Task:** AWS Task 3 - Completed.
+* **Day 08 Task:** AWS Task 4 - Completed.
+* **Day 09 Task:** VCS Task - Completed.
+* **Day 10 Task:** Docker Task - Completed.
