@@ -13,3 +13,4 @@ Repository for daily tasks:
 * **Day 09 Task:** VCS Task - Completed.
 * **Day 10 Task:** Docker Task - Completed.
 * **Day 11 Task:** Docker Task 2 - Completed.
+* **Day 12 Task:** Docker Task 3 - Completed.
