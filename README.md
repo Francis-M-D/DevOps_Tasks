@@ -18,4 +18,4 @@ Repository for daily tasks:
 * **Day 14 Task:** Kubernetes Task 2 - Completed.
 * **Day 15 Task:** Jenkins Task - Completed.
 * **Day 16 Task:** Jenkins Task 2 - Completed.
-
+* **Day 17 Task:** Terraform Task - Completed.
