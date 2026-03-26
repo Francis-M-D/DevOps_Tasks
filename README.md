@@ -19,3 +19,4 @@ Repository for daily tasks:
 * **Day 15 Task:** Jenkins Task - Completed.
 * **Day 16 Task:** Jenkins Task 2 - Completed.
 * **Day 17 Task:** Terraform Task - Completed.
+* **Day 18 Task:** Terraform Task 2 - Completed.
