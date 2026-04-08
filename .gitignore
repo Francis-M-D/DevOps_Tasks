@@ -1,0 +1,55 @@
+# ==============================================================================
+# Terraform
+# ==============================================================================
+
+# Local .terraform directories (contains provider binaries and modules)
+**/.terraform/*
+
+# .tfstate files (contains sensitive infrastructure data)
+*.tfstate
+*.tfstate.*
+
+# Crash log files
+crash.log
+crash.*.log
+
+# Exclude all .tfvars files (likely contain sensitive secrets)
+# Exception: keep *.auto.tfvars if they don't contain secrets
+*.tfvars
+*.tfvars.json
+
+# Ignore override files
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Ignore transient lock files
+.terraform.tfstate.lock.info
+
+# Ignore CLI configuration files
+.terraformrc
+terraform.rc
+
+# ==============================================================================
+# Docker
+# ==============================================================================
+
+# Ignore all log files (not just Docker logs)
+*.log
+
+# Ignore data volumes or database files often mounted in Docker
+data/
+db/
+
+# Docker Compose override files (often used for local-only settings)
+docker-compose.override.yml
+
+# Environment variable files (CRITICAL: contain secrets)
+.env
+.env.local
+.env.*.local
+
+# Docker image and container metadata (rarely committed)
+.docker/
+
